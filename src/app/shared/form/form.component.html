@@ -1,0 +1,252 @@
+<form (ngSubmit)="onSubmit()" *ngIf="!submit" [formGroup]="profileForm">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+              <label>
+                {{'inputName.form.firstName' | translate}} 
+              </label>
+            </div>
+            <div class="col-12">
+              <input class="form-control"
+                formControlName="firstName"
+
+                maxLength="30"
+                matInput
+                placeholder="{{'inputPlaceholder.form.firstName' | translate}}"
+                required
+                type="text">
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)"
+                class="alert alert-danger">
+                <div *ngIf="firstName.errors.required">
+                  {{'error.form.firstName.required' | translate}}
+               </div>
+                <div *ngIf="firstName.errors.minlength">
+                  {{'error.form.firstName.minLength' | translate}}
+                </div>
+                <div *ngIf="firstName.errors.maxlength">
+                  {{'error.form.firstName.maxLength' | translate}}
+                </div>
+                <div *ngIf="firstName.errors.pattern">
+                  {{'error.form.firstName.pattern' | translate}}
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="row">
+          <div class="col-12">
+            <label>
+              {{'inputName.form.name' | translate}}
+            </label>
+          </div>
+          <div class="col-12">
+            <input class="form-control"
+              formControlName="name"
+              id="name"
+              maxLength="30"
+              matInput
+              placeholder="{{'inputPlaceholder.form.name' | translate}}"
+              required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div *ngIf="name.invalid && (name.dirty || name.touched)"
+                class="alert alert-danger">
+              <div *ngIf="name.errors.required">
+                {{'error.form.name.required' | translate}}
+              </div>
+              <div *ngIf="name.errors.minlength">
+                {{'error.form.name.minLength' | translate}}
+              </div>
+              <div *ngIf="name.errors.maxlength">
+                {{'error.form.name.maxLength' | translate}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <label>
+              {{'inputName.form.dateOfBirth' | translate}}
+            </label>
+          </div>
+          <div class="col-12">
+              <input class="form-control"
+                formControlName="dateOfBirth"
+                matInput
+                placeholder="{{'inputPlaceholder.form.dateOfBirth' | translate}}"
+                required
+                type="date">
+          </div>
+          </div>
+        <div class="row">
+          <div class="col-12">
+              <div *ngIf="dateOfBirth.invalid && (dateOfBirth.dirty || dateOfBirth.touched)"
+              class="alert alert-danger">
+
+            <div *ngIf="dateOfBirth.errors.required">
+              {{'error.form.dateOfBirth.required' | translate}}
+            </div>
+            <div *ngIf="dateOfBirth.errors.pattern">
+              {{'error.form.dateOfBirth.pattern' | translate}}
+            </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-12">
+              <label>
+               {{'inputName.form.phoneNumber' | translate}}
+              </label>
+          </div>
+          
+          <div class="col-12">
+              <input
+              class="form-control"
+              formControlName="phoneNumber"
+              matInput
+              required
+              type="text"
+        >
+          </div>
+        </div>
+       
+        <div class="row">
+          <div class="col-12">
+            <div *ngIf="phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)"
+            class="alert alert-danger">
+          <div *ngIf="phoneNumber.errors.required">
+            {{'error.form.phoneNumber.required' | translate}}
+          </div>
+    <div *ngIf="phoneNumber.errors.minlength">
+      {{'error.form.phoneNumber.minLength' | translate}}
+    </div>
+    <div *ngIf="phoneNumber.errors.maxlength">
+      {{'error.form.phoneNumber.maxLength' | translate}}
+          </div>
+        </div>
+          </div>
+        </div>
+    <div class="row">
+      <div class="col-12">
+        <label>
+          {{'inputName.form.email' | translate}}
+          <input class="form-control"
+                 formControlName="email"
+                 fullWidth
+                 maxLength="70"
+                 matInput
+                 placeholder="{{'inputPlaceholder.form.email' | translate}}"
+                 required
+                 type="email">
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div *ngIf="email.invalid && (email.dirty || email.touched)"
+      class="alert alert-danger">
+
+    <div *ngIf="email.errors.required">
+      {{'error.form.email.required' | translate}}
+    </div>
+    <div *ngIf="email.errors.minlength">
+      {{'error.form.email.minLength' | translate}}
+    </div>
+    <div *ngIf="email.errors.maxlength">
+      {{'error.form.email.maxLength' | translate}}
+    </div>
+    <div *ngIf="email.errors.email">
+      {{'error.form.email.email' | translate}}
+    </div>
+  </div>
+    </div>
+    <div class="row">
+      <label>
+        {{'inputName.form.password' | translate}}
+        <input class="form-control"
+               formControlName="password"
+               fullWidth
+               maxLength="30"
+               matInput
+               placeholder="{{'inputPlaceholder.form.password' | translate}}"
+               required
+               type="password">
+      </label>
+    </div>
+    <div class="row">
+      <div *ngIf="password.invalid && (password.dirty || password.touched)"
+      class="alert alert-danger">
+
+    <div *ngIf="password.errors.required">
+      {{'error.form.password.required' | translate}}
+    </div>
+    <div *ngIf="password.errors.minlength">
+      {{'error.form.password.minLength' | translate}}
+    </div>
+    <div *ngIf="password.errors.maxlength">
+      {{'error.form.password.maxLength' | translate}}
+    </div>
+  </div>
+    </div>
+    <div class="row">
+      <label>
+        {{'inputName.form.confirmPassword' | translate}}
+        <input class="form-control"
+               formControlName="confirmPassword"
+               fullWidth
+               maxLength="30"
+               matInput
+               placeholder="{{'inputPlaceholder.form.confirmPassword' | translate}}"
+               required
+               type="password">
+      </label>
+    </div>
+    <div class="row">
+      <div *ngIf="confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched)"
+      class="alert alert-danger">
+
+    <div *ngIf="confirmPassword.errors.required">
+      {{'error.form.confirmPassword.required' | translate}}
+    </div>
+
+</div>
+<div *ngIf="profileForm.errors?.matchPasswords">
+  {{'error.form.confirmPassword.unmatch' | translate}}
+</div>
+    </div>
+    <div class="row">
+      <label>{{'inputName.form.generalConditions' | translate}}</label>
+    </div>
+    <div class="row">
+      <label for="generalConditions">{{'inputName.form.acceptGeneralConditions' | translate}}
+        <input checkboxObject.required="true"
+               class="form-control"
+               formControlName="generalConditions"
+               name="subscribe"
+               type="checkbox"
+               value="generalConditions">
+        </label>
+    </div>
+    <div class="row">
+      <div *ngIf="generalConditions.invalid && (generalConditions.dirty || generalConditions.touched)"
+      class="alert alert-danger">
+
+    <div *ngIf="generalConditions.errors.required">
+      {{'error.form.generalConditions.required' | translate}}
+    </div>
+  </div>
+    </div>
+    <div class="row">
+      <button [disabled]="!profileForm.valid" mat-raised-button color="primary" fullWidth type="submit">{{'inputName.form.submit' | translate}}</button>
+    </div>
+    </div>
+</form>
+
+<div *ngIf="submit">
+  <h1>Inscription réussie !</h1>
+</div>

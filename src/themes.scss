@@ -1,0 +1,86 @@
+// import Nebular Theme System and the default theme
+@import '~@nebular/theme/styles/theming';
+@import '~@nebular/theme/styles/themes/default';
+@import '~@nebular/theme/styles/themes/cosmic';
+@import '~@nebular/theme/styles/themes/corporate';
+//@import "~ng2-smart-table/";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+img {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+$nb-enabled-themes: (default, dark, corporate);
+
+// default theme personalize
+$nb-themes: nb-register-theme((
+        color-bg: #3464AD,
+        shadow: 0 1px 2px 0 #3780c0,
+        layout-bg: #ffffff,
+        color-fg: #222222
+), default, default); // let's leave it as default
+
+//cosmic theme personalize
+$nb-themes: nb-register-theme((
+        color-bg: #222222,
+        shadow: 0 1px 2px 0 #000000,
+        color-fg: #303030,
+        layout-bg: #ededed,
+), dark, cosmic);
+
+
+//corporate theme personalize
+$nb-themes: nb-register-theme((
+  //GLOBAL
+        font-main: unquote('"Open Sans", sans-serif'),
+        color-bg: #ffffff,
+        shadow: 0 2px 12px 0 #dfe3eb,
+        color-fg: #a4abb3,
+        layout-bg: #ededed,
+        font-size: 14px,
+  // font-weight-normal: 600, ne fonctionne pas, voir tuleap bug #99
+        layout-padding: 1rem,
+  //BUTTON
+        btn-primary-bg: #3464AD,
+        btn-success-bg: #3464AD,
+  //FOOTER
+        footer-bg: #222222,
+        footer-fg: #979797,
+        footer-padding: 0,
+  //HEADER
+        header-bg: #ffffff,
+        header-fg: #454545,
+        header-font-size: 19px,
+        header-height: 6.4rem,
+  //SIDEBAR
+        sidebar-bg: #3565AD,
+        sidebar-fg: #ffffff,
+        sidebar-header-height: header-height,
+        sidebar-padding: 0rem,
+  //MENU
+        menu-font-size: 12px,
+        menu-font-weight: 600,
+        menu-bg: sidebar-bg,
+        menu-fg: #ffffff,
+        menu-submenu-fg: menu-fg,
+        menu-submenu-active-bg: #99CC00,
+        menu-icon-font-size: 1.6rem,
+        menu-icon-color: #ffffff,
+  //CARD
+        card-header-border-width:1px,
+        card-margin: 0px,
+        smart-table-font-size:1rem,
+        smart-table-actions-font-size: 1rem,
+        select-border-width: 2px,
+        color-primary: #3565AD,
+        tabs-selected:#3565AD,
+        tabs-selected-second-color: #3565AD,
+        route-tabs-selected: #3565AD,
+        form-control-success-border-color: #3565AD,
+        link-color: #3565AD,
+), corporate, corporate);

@@ -1,0 +1,80 @@
+{"error" : {
+    "form": {
+      "firstName": {
+            "required": "Le prénom est requis.",
+        "minLength": "Le prénom doit faire 2 caractères au minimum.",
+        "maxLength": "Le prénom doit faire 30 caractères au maximum.",
+            "pattern": "Le prénom doit avoir la syntaxe suivante : Première lettre en majuscule, certains caractères sont interdits."
+        }, 
+        "name": {
+            "required": "Le nom est requis.",
+          "minLength": "Le nom doit faire 2 caractères au minimum.",
+          "maxLength": "Le nom doit faire 30 caractères au maximum.",
+            "pattern": "Le nom doit avoir la syntaxe suivante : Toutes les lettres en majuscule, certains caractères sont interdits."
+        },
+      "dateOfBirth": {
+            "required": "La date de naissance est requise.",
+            "pattern": "La date de naissance doit avoir la syntaxe suivante : jj / mm / aaaa et se situer entre [1920-2009]."
+        },
+        "country": {
+          "required": "Le pays est requis."
+        },
+      "phoneNumber": {
+            "required": "Le numéro de téléphone est requis.",
+        "pattern": "Le numéro de téléphone doit avoir la syntaxe suivante : 10 chiffres, le premier chiffre doit être 0.",
+        "minLength": "Le numéro de téléphone doit faire 9 charactères minimum.",
+        "maxLength": "Le numéro de téléphone doit faire 13 charactères au maximum."
+        },
+        "email": {
+            "required": "L'adresse e-mail est requise.",
+          "minLength": "L'adresse e-mail doit faire 3 caractères minimum.",
+          "maxLength": "L'adresse e-mail doit faire 70 caractères au maximum.",
+            "email": "L'adresse e-mail doit être valide."
+        },
+        "password": {
+            "required": "Le mot de passe est requis.",
+          "minLength": "Le mot de passe doit faire 5 caractères minimum.",
+          "maxLength": "Le mot de passe doit faire 30 caractères au maximum."
+        },
+      "confirmPassword": {
+            "required": "La confirmation du mot de passe est requise.",
+        "minLength": "La confirmation du mot de passe doit faire 5 caractères minimum.",
+        "maxLength": "La confirmation du mot de passe doit faire 30 caractères au maximum.",
+            "unmatch": "La confirmation du mot de passe doit correspondre avec le mot de passe."
+        },
+      "generalConditions": {
+            "required": "Les conditions générales doivent être acceptées."
+        }
+    }
+},
+"title": {
+    "register": "S'inscrire"
+},
+  "inputName": {
+    "form": {
+      "firstName": "Prénom",
+        "name": "Nom",
+      "dateOfBirth": "Date de naissance",
+      "country": "Pays",
+      "phoneNumber": "Numéro de téléphone",
+        "email": "Email",
+        "password": "Mot de passe",
+      "confirmPassword": "Confirmer le mot de passe",
+      "generalConditions": "Conditions générales",
+      "acceptGeneralConditions": "J'accepte les conditions générales d'utilisation",
+        "submit": "Soumettre"
+    }
+    
+},
+"inputPlaceholder": {
+    "form": {
+      "firstName": "John",
+        "name": "Smith",
+      "dateOfBirth": "jj / mm / aaaa",
+      "country": "Pays",
+        "email": "john.smith@epsi.fr",
+        "password": "Mot de passe",
+      "confirmPassword": "Confirmer le mot de passe"
+    }
+}
+}

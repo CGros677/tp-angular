@@ -1,0 +1,78 @@
+{"error" : {
+    "form": {
+      "firstName": {
+            "required": "First name is required.",
+        "minLength": "First name must be at least 2 characters long.",
+        "maxLength": "First name must be max 30 characters long.",
+            "pattern": "First name must have the following syntax : First letter uppercase, some characters are forbidden."
+        }, 
+        "name": {
+            "required": "Name is required",
+          "minLength": "Name must be at 2 characters long.",
+          "maxLength": "Name must be max 30 characters long.",
+            "pattern": "Name must have the following sytax : All letters uppercase, some characters are forbidden."
+        },
+      "dateOfBirth": {
+            "required": "Date of birth is required.",
+            "pattern": "Date of birth must have the following syntax : jj / mm / aaaa and between [1920-2009]."
+        },
+      "country": {
+        "required": "Country is required."
+      },
+      "phoneNumber": {
+            "required": "Phone number is required.",
+        "minLength": "Phone number must be at least 9 characters long.",
+        "maxLength": "Phone number must be max 13 characters long."
+        },
+        "email": {
+            "required": "Email is required.",
+          "minLength": "Email must be at least 3 characters long.",
+          "maxLength": "Email must be max 70 characters long.",
+            "email": "Email must be a valid address."
+        },
+        "password": {
+            "required": "Password is required.",
+          "minLength": "Password must be at least 5 characters long.",
+          "maxLength": "Password must be max 30 characters long."
+        },
+      "confirmPassword": {
+            "required": "Password confirmation is required.",
+        "minLength": "Password confirmation must be at least 5 characters long.",
+        "maxLength": "Password confirmation must be max 30 characters long.",
+            "unmatch": "Confirmation password must match with password."
+        },
+      "generalConditions": {
+            "required": "General conditions must be accepted."
+        }
+    }
+},
+"title": {
+    "register": "Register"
+},
+  "inputName": {
+    "form": {
+      "firstName": "First name",
+        "name": "Name",
+      "dateOfBirth": "Date of birth",
+      "country": "Country",
+      "phoneNumber": "Phone number",
+        "email": "Email",
+        "password": "Password",
+      "confirmPassword": "Confirm password",
+      "generalConditions": "General conditions",
+      "acceptGeneralConditions": "I accept the general conditions of use",
+        "submit": "Submit"
+    }
+},
+  "inputPlaceholder": {
+    "form": {
+      "firstName": "John",
+        "name": "Smith",
+      "dateOfBirth": "jj / mm / aaaa",
+      "country": "Country",
+        "email": "john.smith@epsi.fr",
+        "password": "Password",
+      "confirmPassword": "Confirm Password"
+    }
+}
+}
